@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/spinner_level3_User_Input_post_type"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/User_post_type"/>
+    <EditText
+        android:id="@+id/EditText_level3_User_Input_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"/>
+
+    <Button
+        android:id="@+id/Button_level3_User_Input_addImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image:"/>
+    <ImageView
+        android:id="@+id/imageView_level3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/urban_english"/>
+    <EditText
+        android:id="@+id/EditText_level3_User_Input_Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        />
+
+
+
+
+</LinearLayout>

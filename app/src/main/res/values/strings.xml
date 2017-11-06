@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Urban English</string>
+    <string name="urban_english">Urban English</string>
+    <string name="new_post">New Post</string>
+    <string name="add">Add</string>
+    <string name="newpostconfirm_toast">New Post Added</string>
+
+    <string-array name="Level1_Options">
+        <item> Social</item>
+        <item> Media</item>
+        <item> Applied</item>
+        <item> User Feeds</item>
+        <item> Package 1</item>
+        <item> Package 2</item>
+        <item> Package 3</item>
+        <item> Favorites</item>
+    </string-array>
+
+    <string-array name="User_post_type">
+        <item>Question</item>
+        <item>Knowledge Sharing</item>
+    </string-array>
+</resources>
