@@ -27,9 +27,11 @@ abstract class SinglePost {
 
 
 
-    public SinglePost(CatagoriesEnum catagory, String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+    public SinglePost(CatagoriesEnum catagory, String title, String description,Date date,
+                                            int imgResId, int audResId, int likeNUM, int viewNum) {
         m_Id = UUID.randomUUID();
         m_Title = title;
+        m_description = description;
         m_date = date;
         m_LikeNUM = likeNUM;
         m_ViewNum = viewNum;
@@ -125,8 +127,8 @@ abstract class SinglePost {
 public class Data {
 
     public static class Applied extends SinglePost {
-        public Applied(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Applied,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Applied(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Applied,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Applied() {
@@ -135,8 +137,8 @@ public class Data {
     }
 
     public static class Social extends SinglePost {
-        public Social(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Social,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Social(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Social,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Social() {
@@ -145,8 +147,8 @@ public class Data {
     }
 
     public static class Media extends SinglePost {
-        public Media(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Media,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Media(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Media,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Media() {
@@ -166,8 +168,8 @@ public class Data {
 
 
         //public uuid owner;
-        public UserFeed(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.UserFeeds,title, date, imgResId, audResId, likeNUM, viewNum);
+        public UserFeed(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.UserFeeds,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public UserFeed() {
@@ -177,8 +179,8 @@ public class Data {
     }
 
     public static class Pkg1 extends SinglePost {
-        public Pkg1(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Package1,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Pkg1(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Package1,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Pkg1() {
@@ -187,8 +189,8 @@ public class Data {
     }
 
     public static class Pkg2 extends SinglePost {
-        public Pkg2(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Package2,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Pkg2(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Package2,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Pkg2() {
@@ -196,8 +198,8 @@ public class Data {
         }
     }
     public static class Pkg3 extends SinglePost {
-        public Pkg3(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Package3,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Pkg3(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Package3,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Pkg3() {
@@ -205,8 +207,8 @@ public class Data {
         }
     }
     public static class Favorite extends SinglePost {
-        public Favorite(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
-            super(CatagoriesEnum.Favorites,title, date, imgResId, audResId, likeNUM, viewNum);
+        public Favorite(String title,String description, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Favorites,title,description, date, imgResId, audResId, likeNUM, viewNum);
         }
 
         public Favorite() {

@@ -53,9 +53,9 @@ public class DataLab {
 
     private Void fillSocial() {
         m_socials = new ArrayList<>();
-        Data.Social m_socials1 = new Data.Social("socials1", new Date(), R.drawable.a1, 0, 1, 1);
+        Data.Social m_socials1 = new Data.Social("socials1","Description", new Date(), R.drawable.a1, 0, 1, 1);
         m_socials.add(m_socials1);
-        Data.Social m_socials2 = new Data.Social("socials2", new Date(), R.drawable.a1, 0, 1, 1);
+        Data.Social m_socials2 = new Data.Social("socials2","Description", new Date(), R.drawable.a1, 0, 1, 1);
         m_socials.add(m_socials2);
         return null;
     }
@@ -75,9 +75,9 @@ public class DataLab {
 
     private Void fillMedia() {
         m_medias = new ArrayList<>();
-        Data.Media m_media1 = new Data.Media("media1", new Date(), R.drawable.b2, 0, 0, 0);
+        Data.Media m_media1 = new Data.Media("media1","Description", new Date(), R.drawable.b2, 0, 0, 0);
         m_medias.add(m_media1);
-        Data.Media m_media2 = new Data.Media("media2", new Date(), R.drawable.b2, 0, 0, 0);
+        Data.Media m_media2 = new Data.Media("media2","Description", new Date(), R.drawable.b2, 0, 0, 0);
         m_medias.add(m_media2);
         return null;
     }
@@ -97,9 +97,9 @@ public class DataLab {
 
     private Void fillApplied() {
         m_applieds = new ArrayList<>();
-        Data.Applied m_applied1 = new Data.Applied("applied1", new Date(), R.drawable.c3, 0, 0, 0);
+        Data.Applied m_applied1 = new Data.Applied("applied1","Description", new Date(), R.drawable.c3, 0, 0, 0);
         m_applieds.add(m_applied1);
-        Data.Applied m_applied2 = new Data.Applied("applied2", new Date(), R.drawable.c3, 0, 0, 0);
+        Data.Applied m_applied2 = new Data.Applied("applied2","Description", new Date(), R.drawable.c3, 0, 0, 0);
         m_applieds.add(m_applied2);
         return null;
     }
@@ -119,9 +119,9 @@ public class DataLab {
 
     private Void fillUserfeed() {
         m_userFeeds = new ArrayList<>();
-        Data.UserFeed m_userfeeds1 = new Data.UserFeed("userfeeds1", new Date(), 0, 0, 0, 0);
+        Data.UserFeed m_userfeeds1 = new Data.UserFeed("userfeeds1","Description", new Date(), 0, 0, 0, 0);
         m_userFeeds.add(m_userfeeds1);
-        Data.UserFeed m_userfeeds2 = new Data.UserFeed("userfeeds2", new Date(), 0, 0, 0, 0);
+        Data.UserFeed m_userfeeds2 = new Data.UserFeed("userfeeds2","Description", new Date(), 0, 0, 0, 0);
         m_userFeeds.add(m_userfeeds2);
         return null;
     }
@@ -149,9 +149,9 @@ public class DataLab {
 
     private Void fillPkg1() {
         m_pkg1s = new ArrayList<>();
-        Data.Pkg1 m_pakag1_1 = new Data.Pkg1("pkg1_1", new Date(), 0, 0, 0, 0);
+        Data.Pkg1 m_pakag1_1 = new Data.Pkg1("pkg1_1","Description", new Date(), 0, 0, 0, 0);
         m_pkg1s.add(m_pakag1_1);
-        Data.Pkg1 m_pakag1_2 = new Data.Pkg1("pkg1_2", new Date(), 0, 0, 0, 0);
+        Data.Pkg1 m_pakag1_2 = new Data.Pkg1("pkg1_2","Description", new Date(), 0, 0, 0, 0);
         m_pkg1s.add(m_pakag1_2);
         return null;
     }
@@ -169,9 +169,9 @@ public class DataLab {
 
     private Void fillPkg2() {
         m_pkg2s = new ArrayList<>();
-        Data.Pkg2 m_pakag2_1 = new Data.Pkg2("pkg2_1", new Date(), 0, 0, 0, 0);
+        Data.Pkg2 m_pakag2_1 = new Data.Pkg2("pkg2_1","Description", new Date(), 0, 0, 0, 0);
         m_pkg2s.add(m_pakag2_1);
-        Data.Pkg2 m_pakag2_2 = new Data.Pkg2("pkg2_2", new Date(), 0, 0, 0, 0);
+        Data.Pkg2 m_pakag2_2 = new Data.Pkg2("pkg2_2","Description", new Date(), 0, 0, 0, 0);
         m_pkg2s.add(m_pakag2_2);
         return null;
     }
@@ -189,9 +189,9 @@ public class DataLab {
 
     private Void fillPkg3() {
         m_pkg3s = new ArrayList<>();
-        Data.Pkg3 m_pakag3_1 = new Data.Pkg3("pkg3_1", new Date(), 0, 0, 0, 0);
+        Data.Pkg3 m_pakag3_1 = new Data.Pkg3("pkg3_1","Description", new Date(), 0, 0, 0, 0);
         m_pkg3s.add(m_pakag3_1);
-        Data.Pkg3 m_pakag3_2 = new Data.Pkg3("pkg3_2", new Date(), 0, 0, 0, 0);
+        Data.Pkg3 m_pakag3_2 = new Data.Pkg3("pkg3_2","Description", new Date(), 0, 0, 0, 0);
         m_pkg3s.add(m_pakag3_2);
         return null;
     }
