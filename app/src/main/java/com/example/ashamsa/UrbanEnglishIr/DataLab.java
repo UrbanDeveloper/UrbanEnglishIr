@@ -53,9 +53,9 @@ public class DataLab {
 
     private Void fillSocial() {
         m_socials = new ArrayList<>();
-        Data.Social m_socials1 = new Data.Social("socials1", new Date(), R.drawable.a1, 0, 1, 1);
+        Data.Social m_socials1 = new Data.Social("socials1", new Date(), 0, 0, 1, 1);
         m_socials.add(m_socials1);
-        Data.Social m_socials2 = new Data.Social("socials2", new Date(), R.drawable.a1, 0, 1, 1);
+        Data.Social m_socials2 = new Data.Social("socials2", new Date(), 0, 0, 1, 1);
         m_socials.add(m_socials2);
         return null;
     }
@@ -75,9 +75,9 @@ public class DataLab {
 
     private Void fillMedia() {
         m_medias = new ArrayList<>();
-        Data.Media m_media1 = new Data.Media("media1", new Date(), R.drawable.b2, 0, 0, 0);
+        Data.Media m_media1 = new Data.Media("media1", new Date(), 0, 0, 0, 0);
         m_medias.add(m_media1);
-        Data.Media m_media2 = new Data.Media("media2", new Date(), R.drawable.b2, 0, 0, 0);
+        Data.Media m_media2 = new Data.Media("media2", new Date(), 0, 0, 0, 0);
         m_medias.add(m_media2);
         return null;
     }
@@ -97,9 +97,9 @@ public class DataLab {
 
     private Void fillApplied() {
         m_applieds = new ArrayList<>();
-        Data.Applied m_applied1 = new Data.Applied("applied1", new Date(), R.drawable.c3, 0, 0, 0);
+        Data.Applied m_applied1 = new Data.Applied("applied1", new Date(), 0, 0, 0, 0);
         m_applieds.add(m_applied1);
-        Data.Applied m_applied2 = new Data.Applied("applied2", new Date(), R.drawable.c3, 0, 0, 0);
+        Data.Applied m_applied2 = new Data.Applied("applied2", new Date(), 0, 0, 0, 0);
         m_applieds.add(m_applied2);
         return null;
     }

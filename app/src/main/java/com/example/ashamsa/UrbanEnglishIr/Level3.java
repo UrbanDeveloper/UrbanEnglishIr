@@ -1,6 +1,10 @@
 package com.example.ashamsa.UrbanEnglishIr;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.ParcelFileDescriptor;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,13 +15,12 @@ import android.widget.TextView;
 
 import com.example.ashamsa.recyclerviewtemplate.R;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.UUID;
 
+import android.content.res.AssetManager;
 
-/**
- * Created by ashamsa on 10/22/2017.
- */
 
 public class Level3 extends Fragment {
     //// TODO: 10/31/2017 back icon should be created
@@ -64,7 +67,16 @@ public class Level3 extends Fragment {
         }
 
         m_textView_Title.setText(m_singlePost.getTitle());
-        m_imageView.setImageResource(m_singlePost.m_ImgResId);
+        //// TODO: 11/10/2017 move theimages to assets, and give them same name as their titles, so can be called, by their name
+        //m_imageView.setImageResource(m_singlePost.m_ImgResId);
+        try {
+
+            InputStream stream = getActivity().getAssets().open(m_singlePost.getTitle() + ".PNG");
+            Drawable d = Drawable.createFromStream(stream, null);
+            m_imageView.setImageDrawable(d);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         m_textView_LikeNum.setText(m_singlePost.getLikeNUM().toString());
         m_textView_ViewNum.setText(m_singlePost.getViewNum().toString());
         m_textView_Description.setText(m_singlePost.getDescription().toString());
@@ -120,6 +132,7 @@ public class Level3 extends Fragment {
         super.onSaveInstanceState(outState);
         outState.putInt(VIEWNUM_INDEX, m_ViewNumIndex);
     }
+
 
 
 }
