@@ -155,7 +155,9 @@ public class Data {
     }
 
     public static class UserFeed extends SinglePost {
+
         private boolean m_postConfirmed=false;
+        private String m_comments="";
         public boolean isPostConfirmed() {
             return m_postConfirmed;
         }
@@ -204,6 +206,15 @@ public class Data {
             super();
         }
     }
+    public static class Pkg4 extends SinglePost {
+        public Pkg4(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
+            super(CatagoriesEnum.Package4,title, date, imgResId, audResId, likeNUM, viewNum);
+        }
+
+        public Pkg4() {
+            super();
+        }
+    }
     public static class Favorite extends SinglePost {
         public Favorite(String title, Date date, int imgResId, int audResId, int likeNUM, int viewNum) {
             super(CatagoriesEnum.Favorites,title, date, imgResId, audResId, likeNUM, viewNum);
@@ -218,4 +229,6 @@ public class Data {
 
 
 }
+
+
 

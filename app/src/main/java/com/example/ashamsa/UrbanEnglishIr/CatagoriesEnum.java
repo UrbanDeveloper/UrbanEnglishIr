@@ -12,6 +12,7 @@ public enum CatagoriesEnum {
     Package1,
     Package2,
     Package3,
+    Package4,
     Favorites
 
 }

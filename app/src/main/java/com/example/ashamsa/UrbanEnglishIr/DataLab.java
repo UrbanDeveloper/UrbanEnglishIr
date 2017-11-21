@@ -27,6 +27,7 @@ public class DataLab {
     private List<Data.Pkg1> m_pkg1s;
     private List<Data.Pkg2> m_pkg2s;
     private List<Data.Pkg3> m_pkg3s;
+    private List<Data.Pkg4> m_pkg4s;
     private List<SinglePost> m_favorites;
 
 
@@ -45,6 +46,7 @@ public class DataLab {
         fillPkg1();
         fillPkg2();
         fillPkg3();
+        fillPkg4();
         fillFavorite();
 
 
@@ -155,9 +157,11 @@ public class DataLab {
         m_pkg1s.add(m_pakag1_2);
         return null;
     }
+
     public List<Data.Pkg1> getPkg1s() {
         return m_pkg1s;
     }
+
     public Data.Pkg1 getPkg1(UUID id) {
         for (Data.Pkg1 i : m_pkg1s) {
             if (i.getId().equals(id)) {
@@ -175,9 +179,11 @@ public class DataLab {
         m_pkg2s.add(m_pakag2_2);
         return null;
     }
+
     public List<Data.Pkg2> getPkg2s() {
         return m_pkg2s;
     }
+
     public Data.Pkg2 getPkg2(UUID id) {
         for (Data.Pkg2 i : m_pkg2s) {
             if (i.getId().equals(id)) {
@@ -195,11 +201,37 @@ public class DataLab {
         m_pkg3s.add(m_pakag3_2);
         return null;
     }
+
     public List<Data.Pkg3> getPkg3s() {
         return m_pkg3s;
     }
+
     public Data.Pkg3 getPkg3(UUID id) {
         for (Data.Pkg3 i : m_pkg3s) {
+            if (i.getId().equals(id)) {
+                return i;
+
+            }
+        }
+
+        return null;
+    }
+
+    private Void fillPkg4() {
+        m_pkg4s = new ArrayList<>();
+        Data.Pkg4 m_pakag4_1 = new Data.Pkg4("pkg4_1", new Date(), 0, 0, 0, 0);
+        m_pkg4s.add(m_pakag4_1);
+        Data.Pkg4 m_pakag4_2 = new Data.Pkg4("pkg4_2", new Date(), 0, 0, 0, 0);
+        m_pkg4s.add(m_pakag4_2);
+        return null;
+    }
+
+    public List<Data.Pkg4> getPkg4s() {
+        return m_pkg4s;
+    }
+
+    public Data.Pkg4 getPkg4(UUID id) {
+        for (Data.Pkg4 i : m_pkg4s) {
             if (i.getId().equals(id)) {
                 return i;
 
@@ -245,8 +277,19 @@ public class DataLab {
                 return i;
             }
         }
+        for (Data.Pkg3 i : m_pkg3s) {
+            if (i.getId().equals(id)) {
+                return i;
+            }
+        }
+        for (Data.Pkg4 i : m_pkg4s) {
+            if (i.getId().equals(id)) {
+                return i;
+            }
+        }
         return null;
     }
+
     public List<SinglePost> getSinglePosts(int Catagory) {
         List<SinglePost> m_singleposts = null;
 
@@ -274,7 +317,10 @@ public class DataLab {
             case 6://Package3
                 m_singleposts = (List<SinglePost>) (List<?>) this.getPkg3s();
                 break;
-            case 7://Favorites
+            case 7://Package4
+                m_singleposts = (List<SinglePost>) (List<?>) this.getPkg4s();
+                break;
+            case 8://Favorites
                 m_singleposts = (List<SinglePost>) (List<?>) this.getFavorites();
                 break;
             default:
@@ -283,6 +329,7 @@ public class DataLab {
         }
         return m_singleposts;
     }
+
     public List<SinglePost> getSinglePosts(UUID id) {
         SinglePost m_singlepost = getSinglePost(id);
         List<SinglePost> m_singleposts = null;
@@ -308,6 +355,9 @@ public class DataLab {
             case Package3:
                 m_singleposts = (List<SinglePost>) (List<?>) this.getPkg3s();
                 break;
+            case Package4:
+                m_singleposts = (List<SinglePost>) (List<?>) this.getPkg4s();
+                break;
             case Favorites:
                 m_singleposts = (List<SinglePost>) (List<?>) this.getFavorites();
                 break;
@@ -321,9 +371,11 @@ public class DataLab {
         m_favorites = new ArrayList<>();
         return null;
     }
+
     public List<SinglePost> getFavorites() {
         return m_favorites;
     }
+
     public SinglePost getFavorite(UUID id) {
         for (SinglePost i : m_favorites) {
             if (i.getId().equals(id)) {
@@ -332,11 +384,13 @@ public class DataLab {
         }
         return null;
     }
+
     public void add2Favorite(SinglePost post) {
         if (!post.isFavorite()) {
             m_favorites.add(post);
         }
     }
+
     public void RemoveFromFavorite(SinglePost post) {
         if (post.isFavorite()) {
             m_favorites.remove(post);
